@@ -1,5 +1,6 @@
 import random
-import word as wordlist
+f = open(word.txt, 'r')
+wordlist = f.read()
 
 
 
