@@ -5,19 +5,22 @@ with open('Word.py') as f:
 
 
 def get_random_word():
+    """Returns a random word from the word list."""
     return random.choice(wordlist).lower().strip()
 
 
 def get_completion(word, guessed):
+    """Shows letters user guessed correctly, and shows _ for guessed letters."""
     return ''.join([letter if letter in guessed else '_' for letter in word])
 
 
 def is_solved(word, guessed):
+    """Checks if all letters in word have been guessed."""
     return len([letter for letter in word if letter not in guessed]) == 0
 
 
-print("Welcome to hangman!")
-input('Please enter your name: ')
+name = input('Please enter your name: ')
+print("Welcome to hangman", name, '!')
 
 
 def hangman():
@@ -36,7 +39,7 @@ def hangman():
             continue
         guessed.append(guess)
         if is_solved(word, guessed):
-            print('Congratulations! You guessed the word', word)
+            print('Congratulations!', name, "You guessed the word", word)
             return
         elif guess in word:
             print("Yes!, guess again")
@@ -50,6 +53,7 @@ def hangman():
 
 
 def the_man(tries):
+    """The different stages of the hangman graphic."""
     stages = ['''
        ------    
        |    |
@@ -114,7 +118,7 @@ while play_again:
     hangman()
     response = ""
     while response != 'y' and response != 'n':
-        response = input('Play again? Y/N ').lower()
+        response = input('Would you like to Play again? Y/N ').lower()
         if response == 'n':
             play_again = False
         elif response != 'y':
