@@ -1,4 +1,5 @@
 # Capstone
+![alt text](https://media.giphy.com/media/ybQIv0CsYm1XY9A8Dm/giphy.gif)
 NCLab Capstone project
 Hangman
 Built with Python
