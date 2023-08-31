@@ -7,7 +7,7 @@ NCLab Capstone project
 
 
 Hangman
-Built with Python
+built with Python
 
 Welcome to my Hangman game written in Python! I wanted to make this simple Hangman game to challenge myself and create something fun.
 The game goes by classic rules: The user has six tries to guess letters to try and find a hidden word.
